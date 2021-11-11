@@ -3,10 +3,15 @@ package geometry;
 public class Test {
 
 	public static void main(String[] args) {
+		
 		Point p1 = new Point();
+		Point p2 = new Point();
+		
+		System.out.println("Vrednost promenljive x objekta na koji p1 referencira je: " + p1.getX());
+		System.out.println("Vrednost reference na objekat p1 je : " + p1);
+		
 		p1.setX(10);
 		p1.setY(30);
-		Point p2 = new Point();
 		p2.setX(20);
 		p2.setY(30);
 		System.out.println(p1 == p2);
@@ -17,8 +22,11 @@ public class Test {
 		p1.getX();
 		Point p3 = new Point();
 		System.out.println(p3.getX());
+		
 		Line l1 = new Line();
-		l1.length();
+		
+		l1.setStartPoint(p1);
+		l1.setEndPoint(p2);
 	}
 
 }
