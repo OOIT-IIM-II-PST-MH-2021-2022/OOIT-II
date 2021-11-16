@@ -12,6 +12,26 @@ public class Point {
 		return Math.sqrt(dX*dX + dY*dY);
 	}
 	
+	@Override
+	public String toString() {
+		return "(" + this.x + ", " + this.y + ")";
+	}
+	
+	//Konstruktori
+	public Point() {
+		
+	}
+	
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public Point(int x, int y, boolean selected) {
+		this(x,y);
+		this.selected = selected;
+	}
+	
 	public int getX() {
 		return x;
 	}

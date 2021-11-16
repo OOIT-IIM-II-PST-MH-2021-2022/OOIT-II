@@ -10,6 +10,28 @@ public class Line {
 		return startPoint.distance(endPoint);
 	}
 	
+	@Override
+	public String toString() {
+		return "(" + this.startPoint.getX() + ", " + this.startPoint.getY() +  
+				") -- > (" + this.endPoint.getX() + ", " + this.endPoint.getY() + ")";
+	}
+	
+	//Konstruktori
+	
+	public Line() {
+		
+	}
+	
+	public Line(Point startPoint, Point endPoint) {
+		this.startPoint = startPoint;
+		this.endPoint = endPoint;
+	}
+	
+	public Line(Point startPoint, Point endPoint, boolean selected) {
+		this(startPoint, endPoint);
+		this.selected = selected;
+	}
+	
 	public Point getStartPoint() {
 		return startPoint;
 	}

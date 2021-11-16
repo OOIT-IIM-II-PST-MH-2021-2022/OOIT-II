@@ -15,6 +15,22 @@ public class Rectangle {
 		return 2*width + 2*height;
 	}
 	
+	//Konstruktori
+	public Rectangle() {
+		
+	}
+	
+	public Rectangle(Point upperLeft, int width, int height) {
+		this.upperLeft = upperLeft;
+		this.height = height;
+		this.width = width;
+	}
+	
+	public Rectangle(Point upperLeft, int width, int height, boolean selected) {
+		this(upperLeft, width, height);
+		this.selected = selected;
+	}
+	
 	//Get i set metode
 	public int getWidth() {
 		return width;
