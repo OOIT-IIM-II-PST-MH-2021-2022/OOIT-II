@@ -4,7 +4,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		Point p1 = new Point();
+		/*Point p1 = new Point();
 		System.out.println(p1.getX()+ ", " + p1.getY() + ", "+ p1.isSelected());
 		Point p2 = new Point();
 		
@@ -31,8 +31,82 @@ public class Test {
 		l1.setEndPoint(p2);
 		System.out.println(l1.getStartPoint() + ", " + l1.getEndPoint() + ", " + l1.isSelected());
 		Rectangle r1 = new Rectangle();
+		r1.setUpperLeft(p3);
+		r1.setWidth(50);
+		r1.setHeight(25);
+		
+		//Vezbe 4
 		System.out.println(p1);
 		System.out.println(l1);
-	}
+		System.out.println(r1);
+		System.out.println(p1.equals(p3));
+		p1.setX(15);
+		p1.setY(10);
+		p3.setX(15);
+		p3.setY(10);
+		System.out.println(p1 == p3);
+		System.out.println(p1.equals(p3));*/
+		
+		
+		//Zadaci za vezbu
+		int faktorijel = 1;
+		int brojac = 6;
+		while(brojac > 0) {
+			faktorijel = faktorijel * brojac;
+			brojac--;
+		}
+		System.out.println(faktorijel);
+	//}
+	
+		int rezultat = 0;
+		for(int i = 1;i<11;i++) {
+			rezultat = rezultat + i;
+		}
+		System.out.println(rezultat);
+		
+		//Veliki zadatak - negde postoji greska!!!
+		for(int godina = 2021; godina < 2023; godina++) {
+			if(godina == 2021) {
+				for(int mesec = 11; mesec<=12; mesec++) {
+					if(mesec == 11) {
+						for(int dan = 23; dan<=31; dan++) {
+						}
+						
+					}
+					for(int dan = 1; dan<= 31; dan++) {
+						if(dan == 25) {
+							System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Katolicki Bozic");
+						}
+						else if(dan == 31) {
+							System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Novogodisnja noc");
+						}
+					}
+				}
+			}
+			for(int mesec = 1 ; mesec<=12; mesec++ ) {
+				for(int dan = 1; dan<=31; dan++) {
+					if(mesec == 1) {
+					switch(dan) {
+					case 1:
+						System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Prvi dan nove godine");
+						break;
+					case 7:
+						System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Badnje vece");
+						break;
+					case 8:
+						System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Pravoslavni Bozic");
+						break;
+					}
+					}
+					else if(mesec == 2) {
+						if(dan == 15) {
+							System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Dan drzavnosti");
+						}
+					}
+					
+				}
+			}
+		}
 
+}
 }

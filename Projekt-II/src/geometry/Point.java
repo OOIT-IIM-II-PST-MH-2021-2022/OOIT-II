@@ -17,6 +17,17 @@ public class Point {
 		return "(" + this.x + ", " + this.y + ")";
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Point) {
+			Point temp = (Point) obj;
+			if(this.x == temp.x && this.y ==  temp.y) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	//Konstruktori
 	public Point() {
 		

@@ -16,6 +16,17 @@ public class Line {
 				") -- > (" + this.endPoint.getX() + ", " + this.endPoint.getY() + ")";
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Line) {
+			Line temp = (Line) obj;
+			if(this.startPoint.equals(temp.startPoint) && this.endPoint.equals(temp.endPoint)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	//Konstruktori
 	
 	public Line() {

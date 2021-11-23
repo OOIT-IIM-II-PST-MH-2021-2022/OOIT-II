@@ -15,6 +15,23 @@ public class Rectangle {
 		return 2*width + 2*height;
 	}
 	
+	@Override
+	public String toString() {
+		return "Upper left point: (" + this.upperLeft.getX() + ", " + this.upperLeft.getY()+ ")"
+				+ " width = " + this.width + " height = " + this.height; 
+	}
+	
+	@Override 
+	public boolean equals(Object obj) {
+		if(obj instanceof Rectangle) {
+			Rectangle temp = (Rectangle) obj;
+			if(this.upperLeft.equals(temp.upperLeft) && this.width == temp.width && this.height == temp.height) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	//Konstruktori
 	public Rectangle() {
 		
