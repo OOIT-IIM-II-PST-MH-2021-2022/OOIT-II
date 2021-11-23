@@ -64,7 +64,8 @@ public class Test {
 		}
 		System.out.println(rezultat);
 		
-		//Veliki zadatak - negde postoji greska!!!
+		//Veliki zadatak - greška ispravljena i zadatak završen!!!
+		int brojPraznika = 0;
 		for(int godina = 2021; godina < 2023; godina++) {
 			if(godina == 2021) {
 				for(int mesec = 11; mesec<=12; mesec++) {
@@ -72,41 +73,66 @@ public class Test {
 						for(int dan = 23; dan<=31; dan++) {
 						}
 						
-					}
+					}else {
 					for(int dan = 1; dan<= 31; dan++) {
 						if(dan == 25) {
-							System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Katolicki Bozic");
+							System.out.println(dan+"."+mesec+"."+godina +" Danas je praznik - Katolicki Bozic");
+							brojPraznika++;
 						}
 						else if(dan == 31) {
-							System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Novogodisnja noc");
+							System.out.println(dan+"."+mesec+"."+godina +" Danas je praznik - Novogodisnja noc");
+							brojPraznika++;
 						}
 					}
+					}
 				}
-			}
+			}else {
 			for(int mesec = 1 ; mesec<=12; mesec++ ) {
 				for(int dan = 1; dan<=31; dan++) {
 					if(mesec == 1) {
 					switch(dan) {
 					case 1:
-						System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Prvi dan nove godine");
+						System.out.println(dan+"."+mesec+"."+godina +" Danas je praznik - Prvi dan nove godine");
+						brojPraznika++;
 						break;
 					case 7:
-						System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Badnje vece");
+						System.out.println(dan+"."+mesec+"."+godina +" Danas je praznik - Badnje vece");
+						brojPraznika++;
 						break;
 					case 8:
-						System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Pravoslavni Bozic");
+						System.out.println(dan+"."+mesec+"."+godina +" Danas je praznik - Pravoslavni Bozic");
+						brojPraznika++;
 						break;
 					}
 					}
 					else if(mesec == 2) {
 						if(dan == 15) {
-							System.out.println(dan+"."+mesec+"."+godina +"Danas je praznik - Dan drzavnosti");
+							System.out.println(dan+"."+mesec+"."+godina +" Danas je praznik - Dan drzavnosti");
+							brojPraznika++;
+						}
+					}
+					else if(mesec == 11) {
+						if(dan == 11) {
+							System.out.println(dan+"."+mesec+"."+godina +" Danas je praznik - Primirje u prvom svetskom ratu");
+							brojPraznika++;
+						}
+					}
+					else if(mesec == 12) {
+						if(dan == 25) {
+							System.out.println(dan+"."+mesec+"."+godina +" Danas je praznik - Katolicki Bozic");
+							brojPraznika++;
+						}
+						else if(dan == 31) {
+							System.out.println(dan+"."+mesec+"."+godina +" Danas je praznik - Novogodisnja noc");
+							brojPraznika++;
 						}
 					}
 					
 				}
 			}
+			}
 		}
+		System.out.println("Broj praznika od 23.11.2021. do 31.12.2022. je: " + brojPraznika);
 
 }
 }
