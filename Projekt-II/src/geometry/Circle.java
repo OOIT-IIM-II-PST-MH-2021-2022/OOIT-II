@@ -14,6 +14,37 @@ public class Circle {
 		return 2*radius*Math.PI;
 	}
 	
+	@Override
+	public String toString() {
+		return "Center: ("+this.center.getX() + ", " + this.center.getY() + "), radius = " + this.radius;
+	}
+	
+	@Override 
+	public boolean equals(Object obj) {
+		if(obj instanceof Circle) {
+			Circle temp = (Circle) obj;
+			if(this.center.equals(temp.center) && this.radius == temp.radius) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	//Konstruktori
+	public Circle() {
+		
+	}
+	
+	public Circle(Point center, int radius) {
+		this.center = center;
+		this.radius = radius;
+	}
+	
+	public Circle(Point center, int radius, boolean selected) {
+		this(center, radius);
+		this.selected = selected;
+	}
+	
 	//Get i set metode
 	public Point getCenter() {
 		return center;
