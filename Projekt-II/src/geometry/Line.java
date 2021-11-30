@@ -10,6 +10,11 @@ public class Line {
 		return startPoint.distance(endPoint);
 	}
 	
+	public boolean contains(int x, int y) {
+		return this.startPoint.distance(new Point(x,y)) + this.endPoint.distance(new Point(x,y)) 
+			- length() <= 2;
+	}
+	
 	@Override
 	public String toString() {
 		return "(" + this.startPoint.getX() + ", " + this.startPoint.getY() +  

@@ -12,6 +12,10 @@ public class Point {
 		return Math.sqrt(dX*dX + dY*dY);
 	}
 	
+	public boolean contains(int x, int y) {
+		return distance(new Point(x, y)) <=2;
+	}
+	
 	@Override
 	public String toString() {
 		return "(" + this.x + ", " + this.y + ")";

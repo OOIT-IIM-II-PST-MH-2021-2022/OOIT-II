@@ -49,7 +49,7 @@ public class Test {
 		
 		
 		//Zadaci za vezbu
-		int faktorijel = 1;
+		/*int faktorijel = 1;
 		int brojac = 6;
 		while(brojac > 0) {
 			faktorijel = faktorijel * brojac;
@@ -132,7 +132,16 @@ public class Test {
 			}
 			}
 		}
-		System.out.println("Broj praznika od 23.11.2021. do 31.12.2022. je: " + brojPraznika);
+		System.out.println("Broj praznika od 23.11.2021. do 31.12.2022. je: " + brojPraznika);*/
 
+		Point p1 = new Point(35,25);
+		Point p2 = new Point(30,20);
+		Line l1 = new Line(p1,p2);
+		Rectangle r1 = new Rectangle(p2, 15, 10);
+		Circle c1 = new Circle(p2, 30);
+		System.out.println(c1.contains(35, 25));
+		System.out.println(c1.contains(p1));
+		/*System.out.println(l1.contains(25, 45));
+		System.out.println(r1.contains(25, 15));*/
 }
 }

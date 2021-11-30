@@ -15,6 +15,11 @@ public class Rectangle {
 		return 2*width + 2*height;
 	}
 	
+	public boolean contains(int x, int y) {
+		return this.upperLeft.getX() + width >= x && this.upperLeft.getX() <= x &&
+				this.upperLeft.getY() + height >= y && this.upperLeft.getY() <= y;
+	}
+	
 	@Override
 	public String toString() {
 		return "Upper left point: (" + this.upperLeft.getX() + ", " + this.upperLeft.getY()+ ")"
