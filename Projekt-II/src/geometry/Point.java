@@ -1,9 +1,10 @@
 package geometry;
 
-public class Point {
+import java.awt.Graphics;
+
+public class Point extends Shape {
 	private int x;
 	private int y;
-	private boolean selected;
 	
 	
 	public double distance(Point p) {
@@ -12,6 +13,7 @@ public class Point {
 		return Math.sqrt(dX*dX + dY*dY);
 	}
 	
+	@Override
 	public boolean contains(int x, int y) {
 		return distance(new Point(x, y)) <=2;
 	}
@@ -30,6 +32,12 @@ public class Point {
 			}
 		}
 		return false;
+	}
+	
+	@Override
+	public void draw(Graphics g) {
+		g.drawLine(x-2, y, x+2, y);
+		g.drawLine(x, y-2, x, y+2);
 	}
 	
 	//Konstruktori
@@ -59,12 +67,7 @@ public class Point {
 	public void setY(int y) {
 		this.y = y;
 	}
-	public boolean isSelected() {
-		return selected;
-	}
-	public void setSelected(boolean selected) {
-		this.selected = selected;
-	}
+
 	
 	
 }
