@@ -139,9 +139,18 @@ public class Test {
 		Line l1 = new Line(p1,p2);
 		Rectangle r1 = new Rectangle(p2, 15, 10);
 		Circle c1 = new Circle(p2, 30);
-		System.out.println(c1.contains(35, 25));
-		System.out.println(c1.contains(p1));
+		//System.out.println(c1.contains(35, 25));
+		//System.out.println(c1.contains(p1));
 		/*System.out.println(l1.contains(25, 45));
 		System.out.println(r1.contains(25, 15));*/
+		
+		//Vezbe 8
+		Point p5 = new Point(50,50);
+		Point p6 = new Point(60,60);
+		System.out.println(p5.compareTo(p6));
+		Line l2 = new Line(p5,p6);
+		System.out.println(l2.compareTo(l1));
+		Circle c2 = new Circle(p5,80);
+		System.out.println(c2.area());
 }
 }

@@ -43,6 +43,29 @@ public class Rectangle extends Shape {
 		return false;
 	}
 	
+	@Override
+	public void draw(Graphics g) {
+		g.drawRect(getUpperLeft().getX(), upperLeft.getY(), width, height);
+	}
+	
+	@Override
+	public void moveTo(int x, int y) {
+		upperLeft.moveTo(x, y);
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		upperLeft.moveBy(byX, byY);
+	}
+	
+	@Override
+	public int compareTo(Object o) {
+		if(o instanceof Rectangle) {
+			return area() - ((Rectangle)o).area();
+		}
+		return 0;
+	}
+	
 	//Konstruktori
 	public Rectangle() {
 		
@@ -79,10 +102,8 @@ public class Rectangle extends Shape {
 		this.upperLeft = upperLeft;
 	}
 
-	@Override
-	public void draw(Graphics g) {
-		// TODO Auto-generated method stub
-		
-	}
+	
+
+	
 	
 }
