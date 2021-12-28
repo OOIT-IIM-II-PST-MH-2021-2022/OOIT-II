@@ -18,10 +18,10 @@ public class Point extends Shape {
 		return distance(new Point(x, y)) <=2;
 	}
 	
-	@Override
+	/*@Override
 	public String toString() {
 		return "(" + this.x + ", " + this.y + ")";
-	}
+	}*/
 	
 	@Override
 	public boolean equals(Object obj) {

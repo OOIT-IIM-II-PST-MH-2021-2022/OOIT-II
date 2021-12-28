@@ -65,9 +65,9 @@ public class Line extends Shape {
 		
 	}
 	
-	public Line(Point startPoint, Point endPoint) {
-		this.startPoint = startPoint;
-		this.endPoint = endPoint;
+	public Line(Point sp, Point ep) {
+		startPoint = sp;
+		endPoint = ep;
 	}
 	
 	public Line(Point startPoint, Point endPoint, boolean selected) {
